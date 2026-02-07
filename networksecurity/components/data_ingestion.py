@@ -1,7 +1,7 @@
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 from networksecurity.entity.artifact_entity import DataIngestionArtifact
-from networksecurity.entity.config_entity import DataIngestConfig
+from networksecurity.entity.config_entity import DataIngestionConfig
 import os
 import sys
 import numpy as np
@@ -15,7 +15,7 @@ load_dotenv()
 MONGO_URI = os.getenv("MONGO_URI")
 
 class DataIngestion:
-    def __init__(self,data_ingestion_config:DataIngestConfig):
+    def __init__(self,data_ingestion_config:DataIngestionConfig):
         try:
             self.data_ingestion_config=data_ingestion_config
         except Exception as e:
